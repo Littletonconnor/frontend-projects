@@ -1,0 +1,145 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --gray-50: hsla(0, 0%, 100%, 0.75);
+  --gray-100: hsla(0, 0%, 100%, 0.95);
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+  max-height: 90%;
+  width: 80%;
+  max-width: 1024px;
+  background: var(--gray-100);
+  border-radius: 8px;
+  font-size: 15px;
+  box-shadow: 9.6px 10.9px 7.8px -3px rgba(0, 0, 0, 0.076),
+    93px 106px 80px -3px rgba(0, 0, 0, 0.08);
+}
+
+.spacer {
+  padding: 30px 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 100px;
+  height: 100%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 100px 80px;
+  align-content: start;
+  gap: 20px;
+  padding: 32px;
+  height: 100%;
+}
+
+.card-container h1 {
+  height: fit-content;
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  font-size: 28px;
+  color: var(--gray-100);
+}
+
+.card-container p {
+  height: fit-content;
+  font-family: "Lexend Deca";
+  font-size: 12px;
+  color: var(--gray-50);
+}
+
+article {
+  height: 100%;
+  width: 100%;
+}
+
+.card-1 {
+  background: var(--bright-orange);
+  border-radius: 4px 0 0 4px;
+}
+
+.card-2 {
+  background: var(--dark-cyan);
+}
+
+.card-3 {
+  border-radius: 0 4px 4px 0;
+  background: var(--very-dark-cyan);
+}
+
+button {
+  border-radius: 24px;
+  border: none;
+  padding: 10px 32px;
+  width: fit-content;
+  box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.06);
+  justify-self: center;
+  cursor: pointer;
+}
+
+.card-1 button {
+  color: var(--bright-orange);
+}
+
+.card-2 button {
+  color: var(--dark-cyan);
+}
+
+.card-3 button {
+  color: var(--very-dark-cyan);
+}
+
+@media (max-width: 1024px) {
+  .cards-container {
+    padding: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    position: static;
+    margin: 20px auto;
+  }
+
+  .spacer {
+    padding: 0;
+  }
+
+  button {
+    justify-self: start;
+  }
+
+  .cards-container {
+    padding: 40px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .card-container {
+    grid-template-rows: auto;
+  }
+
+  .card-1 {
+    border-radius: 4px 4px 0 0px;
+  }
+
+  .card-2 {
+    background: var(--dark-cyan);
+  }
+
+  .card-3 {
+    border-radius: 0 0 4px 4px;
+    background: var(--very-dark-cyan);
+  }
+}
