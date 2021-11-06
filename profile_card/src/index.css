@@ -1,0 +1,181 @@
+/* 1. Use a more intuitive box-sizing model.  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --light-gray: hsl(0, 0%, 90%);
+}
+
+/* 2. Remove default margin for common elements. */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dt,
+dd {
+  margin: 0;
+}
+
+/* 3. Allow percentage-based heights in the application. */
+html,
+body {
+  height: 100%;
+  font-family: "Kumbh Sans";
+}
+
+/* 4. Improve typography across the site. */
+body {
+  font-size: 18px;
+  background: var(--dark-cyan);
+  object-position: 10% 10%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiassed;
+}
+
+/* 5. Make images easier to work with. */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* 6. Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Create a root stacking context */
+#root {
+  height: 100%;
+  isolation: isolate;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.top-circle {
+  top: -50%;
+  left: -20%;
+  position: absolute;
+}
+
+.bottom-circle {
+  right: -20%;
+  bottom: -50%;
+  position: absolute;
+}
+
+.card {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 14px;
+  box-shadow: 2.8px 3.8px 2.2px rgba(0, 0, 0, 0.022),
+    6.7px 9.2px 5.3px rgba(0, 0, 0, 0.033),
+    12.5px 17.4px 10px rgba(0, 0, 0, 0.039),
+    22.3px 31px 17.9px rgba(0, 0, 0, 0.045),
+    41.8px 58.1px 33.4px rgba(0, 0, 0, 0.051),
+    100px 139px 80px rgba(0, 0, 0, 0.07);
+}
+
+.card-container {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 130px 1fr 80px;
+}
+
+.card-header {
+  justify-content: center;
+}
+
+.waves {
+  border-radius: 14px 14px 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+.avatar {
+  margin: auto;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  height: 100px;
+  width: 100px;
+  bottom: 0;
+}
+
+.card-content {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-content: end;
+  padding-bottom: 40px;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
+}
+
+.inline h1 {
+  font-size: 18px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.inline span,
+p {
+  font-size: 18px;
+  color: var(--dark-grayish-blue);
+}
+
+.card-footer {
+  display: flex;
+  padding: 20px 20px;
+  border-top: 1px solid var(--light-gray);
+}
+
+.card-footer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-footer-content .a {
+  font-weight: 700;
+}
+.card-footer-content .b {
+  font-size: 10px;
+  color: var(--dark-gray);
+}
+
+@media (max-width: 375px) {
+}
