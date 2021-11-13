@@ -1,0 +1,42 @@
+.outer-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: min(1000px, 80%);
+  place-content: center;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 100px 120px;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  border-radius: 2px;
+  height: 600px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  border-radius: 20px;
+  background: white;
+  height: 100%;
+  width: 100%;
+  box-shadow: -6.1px -10.2px 2.9px -7px rgba(0, 0, 0, 0.024),
+    -2.5px -4.2px 7.2px -7px rgba(0, 0, 0, 0.034),
+    8.4px 14px 14.7px -7px rgba(0, 0, 0, 0.043),
+    27.6px 45.8px 30.3px -7px rgba(0, 0, 0, 0.055),
+    68px 113px 83px -7px rgba(0, 0, 0, 0.08);
+}
+
+.faq {
+  padding: 40px;
+  font-family: Kumbh Sans;
+}
+
+.faq h1 {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
