@@ -1,0 +1,108 @@
+:root {
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  --primary: hsl(300deg 43% 22%);
+  --secondary: hsl(333deg 80% 67%);
+
+  --gray-300: hsl(303deg 10% 53%);
+  --gray-200: hsl(300deg 24% 96%);
+  --gray-100: hsl(0deg 0% 100%);
+
+  --base: 400;
+  --semibold: 500;
+  --bold: 700;
+}
+
+.container {
+  line-height: 1.1;
+  display: grid;
+  gap: 10px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.container h1 {
+  padding-inline: 30px;
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.container .subtitle {
+  color: var(--gray-300);
+  margin-bottom: 30px;
+}
+
+.review-card {
+  border-radius: 6px;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary);
+  font-weight: var(--bold);
+  background-color: var(--gray-200);
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card .description {
+  color: var(--primary);
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: var(--primary);
+}
+
+.testimonial-card .user {
+  display: flex;
+  gap: 10px;
+}
+
+.testimonial-card .user-details {
+  line-height: 1.5;
+}
+
+.testimonial-card .username {
+  color: white;
+}
+
+.testimonial-card .job-title {
+  color: var(--secondary);
+}
+
+.testimonial-card .review {
+  color: var(--gray-100);
+  line-height: 1.5;
+}
+
+.testimonial-card .review::after,
+.review::before {
+  content: '"';
+}
+
+.testimonial-card img {
+  border-radius: 50%;
+  width: 36px;
+  aspect-ratio: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap {
+  gap: 6px;
+}
+
+@media (min-width: 500px) {
+  .container {
+    background-color: red;
+  }
+}

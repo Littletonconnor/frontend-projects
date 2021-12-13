@@ -1,0 +1,78 @@
+/* 1. Use a more intuitive box-sizing model.  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background gradient */
+  --very-saturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* Text */
+  --very-dark-grayish: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+/* 2. Remove default margin for common elements. */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dt,
+dd {
+  margin: 0;
+}
+
+/* 3. Allow percentage-based heights in the application. */
+html,
+body {
+  font-family: "Spartan";
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+}
+
+/* 4. Improve typography across the site. */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiassed;
+}
+
+/* 5. Make images easier to work with. */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* 6. Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Create a root stacking context */
+#root {
+  height: 100%;
+  width: 100%;
+  isolation: isolate;
+}
