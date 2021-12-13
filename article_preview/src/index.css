@@ -109,7 +109,6 @@
 .card-footer {
   gap: var(--s-4);
   padding: var(--s-6);
-  margin-top: var(--s-4);
   display: flex;
 }
 
