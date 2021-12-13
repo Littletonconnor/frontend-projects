@@ -15,10 +15,14 @@
 }
 
 .container {
+  max-width: 1024px;
+  margin: auto;
+  height: 100%;
   line-height: 1.1;
   display: grid;
+  grid-template-columns: auto;
   gap: 10px;
-  padding: 30px 20px;
+  padding: 30px 60px;
   text-align: center;
 }
 
@@ -32,6 +36,19 @@
 .container .subtitle {
   color: var(--gray-300);
   margin-bottom: 30px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .review-card {
@@ -101,8 +118,117 @@
   gap: 6px;
 }
 
-@media (min-width: 500px) {
+#bg-desktop-top {
+  display: none;
+}
+
+#bg-desktop-bottom {
+  display: none;
+}
+
+#bg-mobile-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#bg-mobile-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.testomonials {
+  grid-column: span 2;
+}
+
+@media (min-width: 840px) {
+  #bg-mobile-top {
+    display: none;
+  }
+
+  #bg-mobile-bottom {
+    display: none;
+  }
+
+  #bg-desktop-top {
+    display: revert;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #bg-desktop-bottom {
+    display: revert;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
   .container {
-    background-color: red;
+    place-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    grid-template-areas:
+      "header reviews"
+      "testimonials testimonials";
+  }
+
+  .container h1 {
+    font-size: 36px;
+  }
+
+  .testimonials {
+    grid-area: testimonials;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .testimonial-card:nth-child(1) {
+    margin-bottom: 24px;
+  }
+  .testimonial-card:nth-child(2) {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .testimonial-card:nth-child(3) {
+    margin-top: 24px;
+  }
+
+  .reviews {
+    padding: 12px 24px;
+  }
+
+  .header {
+    padding: 12px 24px;
+    grid-area: header;
+    text-align: left;
+  }
+
+  .review-card {
+    flex-direction: row;
+    width: max-content;
+    padding-right: 64px;
+    padding-left: 24px;
+  }
+
+  .review-card:nth-child(1) {
+    margin-right: 80px;
+  }
+
+  .review-card:nth-child(2) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .review-card:nth-child(3) {
+    margin-left: 80px;
+  }
+
+  .header h1 {
+    padding-inline: revert;
+  }
+
+  .reviews {
+    grid-area: reviews;
   }
 }
