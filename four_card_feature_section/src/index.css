@@ -1,0 +1,120 @@
+:root {
+  /* Tailwind like design system: */
+
+  /* font size */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
+  --text-2xl: 4rem;
+
+  /* colors */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* secondary */
+  --gray-50: hsl(0, 0%, 98%);
+  --gray-100: hsl(229, 6%, 66%);
+  --gray-200: hsl(234, 12%, 34%);
+
+  /* weights */
+  --weight-light: 200;
+  --weight-normal: 400;
+  --weight-bold: 600;
+
+  /* spacing (margin, padding) */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --s-9: 5rem;
+
+  /* radius */
+  --rounded-sm: 0.125rem;
+  --rounded: 0.25rem;
+  --rounded-md: 0.5rem;
+  --rounded-lg: 0.75rem;
+  --rounded-xl: 1rem;
+  --rounded-2xl: 1.5rem;
+
+  /* Box shadow */
+  --shadow: 0px 5px 17px -8px rgba(0, 0, 0, 0.65);
+}
+
+.title {
+  color: var(--gray-200);
+  font-size: var(--text-lg);
+}
+
+.container {
+  padding: var(--s-8) var(--s-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-title {
+  color: var(--gray-100);
+  font-weight: var(--weight-light);
+}
+
+.container .title-text {
+  font-size: var(--text-sm);
+  max-width: 500px;
+  text-align: center;
+  color: var(--gray-100);
+}
+
+.cards-container,
+.cards-container-nested {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+}
+
+.card-container {
+  background: white;
+  width: 100%;
+  border-radius: var(--rounded);
+  padding: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 350px;
+  box-shadow: var(--shadow);
+}
+
+.card-title {
+  color: var(--gray-200);
+}
+
+.card-content {
+  color: var(--gray-100);
+  font-size: var(--text-xs);
+}
+
+.card-icon {
+  align-self: flex-end;
+}
+
+@media (min-width: 1024px) {
+  .cards-container {
+    flex-direction: row;
+  }
+
+  .card-container:first-of-type,
+  .card-container:last-of-type {
+    align-self: center;
+  }
+
+  .title {
+    font-size: var(--text-xl);
+  }
+}
